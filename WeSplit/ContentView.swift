@@ -6,6 +6,12 @@
 //  Copyright © 2020 Cathal Farrell. All rights reserved.
 //
 
+ /*
+     Views & Modifiers - Challenge 2
+     Go back to project 1 and use a conditional modifier to change the total amount text view
+     to red if the user selects a 0% tip.
+ */
+
 import SwiftUI
 
 struct ContentView: View {
@@ -75,7 +81,8 @@ struct ContentView: View {
                                }
                 Section(header: Text("Bill Total")) {
                     Text("€\(totalBillAmount, specifier: "%.2f")")
-
+                    //Challenge 2
+                    .background(tipAmount > 0 ? Color.clear : Color.red)
                 }
                 Section(header: Text("Amount per person")) {
                     Text("€\(totalPerPerson, specifier: "%.2f")")
