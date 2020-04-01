@@ -82,7 +82,7 @@ struct ContentView: View {
                 Section(header: Text("Bill Total")) {
                     Text("€\(totalBillAmount, specifier: "%.2f")")
                     //Challenge 2
-                    .background(tipAmount > 0 ? Color.clear : Color.red)
+                    .foregroundColor(tipAmount > 0 ? Color.black : Color.red)
                 }
                 Section(header: Text("Amount per person")) {
                     Text("€\(totalPerPerson, specifier: "%.2f")")
